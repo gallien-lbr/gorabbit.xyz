@@ -2,8 +2,8 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>HIT</span>
-        <span class="font-weight-light">Currency</span>
+        <span>AZ</span>
+        <span class="font-weight-light">Apps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn

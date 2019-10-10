@@ -1,32 +1,46 @@
 <template>
-  <v-container>
-      <h1>A Currency Converter for travelers</h1>
-    <v-layout text-center wrap>
-      <v-flex xs12>
-        <v-img
-          :src="require('../assets/undraw_adventure_4hum.svg')"
-          class="my-3" contain height="200"></v-img>
-      </v-flex>
-        <v-col class="d-flex" cols="6" sm="6">
-            <v-select  :items="items" label="Outlined style" outlined></v-select>
-        </v-col>
+    <v-container class="grey lighten-5">
 
-        <v-col class="d-flex" cols="6" sm="6">
-            <v-select  :items="items" label="Outlined style" outlined></v-select>
-        </v-col>
+        <v-card>
+            <v-toolbar
+                    color="blue"
+                    dark
+                    dense
+                    flat
+            >
+                <v-toolbar-title class="body-2">Currency Converter</v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+                <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                <v-row >
+                    <v-col cols="12" md="3">
+                        <v-text-field label="Amount"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" md="3">
+                        <v-select :items="items" label="From:" outlined></v-select>
+                    </v-col>
+                    <v-col cols="12" md="3">
+                        <v-select  :items="items" label="To:" outlined></v-select>
+                    </v-col>
+                    <v-col cols="12" md="3">
+                        <v-btn x-large  block color="secondary" dark>Convert
+                            <v-icon dark right>mdi-checkbox-marked-circle</v-icon>
+                        </v-btn>
+                    </v-col>
+                </v-row>
+                <v-row>
 
-        <v-col class="d-flex" cols="12" sm="12">
-            <v-btn x-large outlined block color="primary" dark>Convert</v-btn>
-        </v-col>
-    </v-layout>
-  </v-container>
+                </v-row>
+            </v-card-text>
+        </v-card>
+    </v-container>
 </template>
 
 <script>
-export default {
-  data: () => ({
+    export default {
+        data: () => ({
 
 
-  }),
-};
+        }),
+    };
 </script>
