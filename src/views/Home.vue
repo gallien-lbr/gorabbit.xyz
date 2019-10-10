@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <Converter />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import Converter from '../components/Converter';
 
 export default {
   components: {
-    HelloWorld,
+    Converter,
   },
 };
 </script>
