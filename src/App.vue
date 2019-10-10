@@ -1,18 +1,26 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>AZ</span>
-        <span class="font-weight-light">Apps</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href=""
-        target="_blank"
+      <router-link
+              to="/"
+              tag="v-toolbar-title"
       >
-        <span class="mr-2">About</span>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>GO</span>
+        <span class="font-weight-light">rabbit.xyz</span>
+      </v-toolbar-title>
+      </router-link>
+      <v-spacer></v-spacer>
+      <router-link
+              to="/about"
+              tag="v-btn"
+      >
+        <v-btn
+          text
+        >
+          <span class="mr-2" >About</span>
       </v-btn>
+      </router-link>
     </v-app-bar>
 
     <v-content>

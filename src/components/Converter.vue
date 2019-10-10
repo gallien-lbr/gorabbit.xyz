@@ -36,22 +36,31 @@
                         </v-btn>
                     </v-col>
                 </v-row>
-                <v-row>
-                    <h2>{{ converterResultToAmount }}</h2>
-                </v-row>
-                <v-row>
-                    <p>
-                    <span v-if="res">With current rate of : {{ res }}</span>
-                    <br /><br />
-                    <span id="date">Latest updated : {{ date }}</span>
-                    <br />
-                    <a href="https://exchangeratesapi.io/">All figures are live from : https://exchangeratesapi.io/</a>
-                    </p>
-                    <p>
-                        Disclaimer: AZApps does not guarantee the accuracy, authenticity, timeliness, reliability,
-                        appropriateness, correct sequencing, or completeness of any of the Information And Content.
-                    </p>
-                </v-row>
+
+                <v-card
+                        class="mx-auto"
+                >
+                    <v-card-text>
+
+               <v-row>
+                   <h2>{{ converterResultToAmount }}</h2>
+               </v-row>
+               <v-row>
+                   <p>
+                   <span v-if="res">With current rate of : {{ res }}</span>
+                   <br /><br />
+                   <span id="date">Latest updated : {{ date }}</span>
+                   <br />
+                   <a href="https://exchangeratesapi.io/">All figures are live from : https://exchangeratesapi.io/</a>
+                   </p>
+                   <p>
+                       Disclaimer: Gorabbit.xyz does not guarantee the accuracy, authenticity, timeliness, reliability,
+                       appropriateness, correct sequencing, or completeness of any of the Information And Content.
+                   </p>
+               </v-row>
+
+                    </v-card-text>
+                </v-card>
 
             </v-card-text>
         </v-card>
