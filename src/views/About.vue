@@ -38,7 +38,7 @@
               <p>
                 We provide online widgets and tools.
                 <br />
-                <a href="mailto:contact@gorabbits.xyz">contact@gorabbits.xyz</a>
+                <a href="mailto:contact@gorabbit.xyz">contact@gorabbit.xyz</a>
                 <br />
               </p>
             </v-card-text>
