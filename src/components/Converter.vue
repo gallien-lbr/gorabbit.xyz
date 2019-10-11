@@ -85,7 +85,7 @@
         }),
 
         created: function () {
-            let api = `http://api.gallienlabeyrie.fr/forex/latest?base=${this.base}`;
+            let api = `https://api.gorabbit.xyz/forex/latest?base=${this.base}`;
             axios.get(api)
                 .then(response => {
                     this.rates = response.data.rates;
