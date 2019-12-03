@@ -1,4 +1,4 @@
-# money_converter
+# gorabbit.xyz
 
 ## Project setup
 ```
