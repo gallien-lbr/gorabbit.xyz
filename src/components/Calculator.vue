@@ -26,7 +26,6 @@
                         v-model="price"
                         suffix="€"
                         outlined
-                        @keypress="isNumber($event)"
                         single-line
                         label="Montant facturé Hors Taxe"
                         type="number"
