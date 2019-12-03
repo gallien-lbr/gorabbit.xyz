@@ -13,6 +13,14 @@
                     <v-btn>Currency Converter</v-btn>
                     </router-link>
                 </v-list-item-title>
+                    <v-list-item-title>
+                        <router-link
+                                to="/freelance-calculator"
+                                tag="v-btn"
+                        >
+                            <v-btn>Freelance calculator</v-btn>
+                        </router-link>
+                </v-list-item-title>
             </v-list-item-content>
         </v-list-item>
 

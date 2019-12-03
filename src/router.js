@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import CurrencyConverter from "./views/CurrencyConverter.vue";
+import FreelanceCalculator from "./views/FreelanceCalculator.vue"
 import Home from "./views/Home.vue";
 
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/currency-converter',
       name: 'currency-converter',
       component: CurrencyConverter
+    },
+    {
+      path: '/freelance-calculator',
+      name: 'freelance-calculator',
+      component: FreelanceCalculator
     },
     {
       path: '/about',
