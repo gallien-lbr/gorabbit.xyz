@@ -30,6 +30,8 @@
                         label="Montant facturé Hors Taxe"
                         type="number"
                         class="pb-5"
+                        min="0"
+                        @keypress="isNumber($event)"
 
                 />
 
@@ -73,19 +75,11 @@
                         block
                         @click="calculate"
                 >
-
-
                   Calculer
                 </v-btn>
               </v-form>
             </v-card>
-
           </v-col>
-
-          <v-col>
-            <img src="assets/images/stellrweb-djb1whucfBY-unsplash.jpg" />
-          </v-col>
-
         </v-row>
       </template>
   </v-container>
@@ -144,6 +138,15 @@ export default {
                 this.errors.push(e)
       });
 
+    },
+    isNumber: function(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
+        evt.preventDefault();
+      } else {
+        return true;
+      }
     }
   },
 
