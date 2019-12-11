@@ -91,6 +91,7 @@
 </style>
 
 <script>
+import FreelanceUtils from "../class/FreelanceUtils";
 
 export default {
   name: 'Calculator',
@@ -128,17 +129,14 @@ export default {
   methods: {
     calculate: function() {
 
-      const vat =  this.vat ? 1 : 0;
-      const plf = this.plf ? 1 : 0;
-
-      fetch(`${process.env.VUE_APP_API_URI}/freelance-tools/income?price=${this.price}&vat=${vat}&plf=${plf}&accre=${this.selRate}`)
-              .then(response => response.json())
-              .then(json => { this.res = json.result })
-              .catch(e => {
-                this.errors.push(e)
-      });
-
+      const util  = new FreelanceUtils();
+      util.plf =  this.plf ? util.defaultPlf : 0 ;
+      util.hasVAT = this.vat;
+      util.accre = this.selRate;
+      util.price = this.price;
+      this.res = util.getNetIncome();
     },
+
     isNumber: function(evt) {
       evt = (evt) ? evt : window.event;
       var charCode = (evt.which) ? evt.which : evt.keyCode;
