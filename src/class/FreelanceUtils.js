@@ -16,14 +16,8 @@ export default class FreelanceUtils{
     getCosts(){
          let costs = 1;
          costs -=  this.plf;
-        // eslint-disable-next-line no-console
-        console.log(costs);
          costs -=  this.hasVAT ? this.VAT : 0;
-        // eslint-disable-next-line no-console
-        console.log(costs);
          costs -=  this.accre + this.MICRO_SOCIAL_CFP;
-        // eslint-disable-next-line no-console
-         console.log(costs);
          return costs;
      }
 }

@@ -91,7 +91,7 @@
 </style>
 
 <script>
-import FreelanceUtils from "../class/FreelanceUtils";
+import Utils from "../class/FreelanceUtils";
 
 export default {
   name: 'Calculator',
@@ -129,7 +129,7 @@ export default {
   methods: {
     calculate: function() {
 
-      const util  = new FreelanceUtils();
+      const util  = new Utils();
       util.plf =  this.plf ? util.defaultPlf : 0 ;
       util.hasVAT = this.vat;
       util.accre = this.selRate;
