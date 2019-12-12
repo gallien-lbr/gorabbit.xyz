@@ -21,6 +21,16 @@
                             <v-btn>Freelance calculator</v-btn>
                         </router-link>
                 </v-list-item-title>
+
+                <v-list-item-title>
+                    <router-link
+                            to="/bordeaux-district"
+                            tag="v-btn"
+                    >
+                        <v-btn>Bordeaux Map District</v-btn>
+                    </router-link>
+                </v-list-item-title>
+
             </v-list-item-content>
         </v-list-item>
 

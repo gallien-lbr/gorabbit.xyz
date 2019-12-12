@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import CurrencyConverter from "./views/CurrencyConverter.vue";
 import FreelanceCalculator from "./views/FreelanceCalculator.vue"
+import BordeauxDistrict  from "./components/BordeauxDistrict";
 import Home from "./views/Home.vue";
 
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/freelance-calculator',
       name: 'freelance-calculator',
       component: FreelanceCalculator
+    },
+    {
+      path: '/bordeaux-district',
+      name: 'bordeaux-district',
+      component: BordeauxDistrict
     },
     {
       path: '/about',
