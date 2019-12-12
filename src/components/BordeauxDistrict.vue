@@ -1,6 +1,19 @@
 <template>
     <div>
-
+        <v-card
+                class="mx-auto"
+                 tile>
+            <v-list>
+                <v-subheader>Quartiers de Bordeaux</v-subheader>
+                <v-list-item-group>
+                    <v-list-item v-for="dist in districts">
+                        <v-list-item-content>
+                            <v-list-item-title v-html="dist.nom"></v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list-item-group>
+            </v-list>
+        </v-card>
     </div>
 </template>
 
@@ -12,20 +25,17 @@
 
         data: () => ({
             api_url: "https://opendata.bordeaux-metropole.fr/api/records/1.0/search/?dataset=bor_sigquartiers",
+            districts: null,
         }),
 
         mounted: function(){
-
-            const allowed = ['fields', 'geometry'];
-            let result = {};
             axios.get(this.api_url)
                 .then(response => {
                     let res = response.data.records;
                     res = res.map((i) => {
                         return(i.fields);
                     });
-                    console.log(res);
-
+                   this.districts = res;
                 })
                 .catch(e => {
                     this.errors.push(e)
